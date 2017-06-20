@@ -1,0 +1,25 @@
+
+<h2 ng-bind="res.title"></h2>
+<div class="block">
+    <div class="list"  ng-repeat="movie in res.subjects">
+        <a href="#" class="clearfix">
+            <dl >
+                <dt class="pull-left">
+                    <img ng-src="{{movie.images.large}}" alt="">
+                </dt>
+                <dl class="pull-left">
+                    <h5 class="h2 text-success">{{movie.title}}</h5>
+                    <p>类型: <span class="text-mgin10" ng-repeat="genres in movie.genres">{{genres}}</span></p>
+
+                    <p>导演: <span class="text-mgin10" ng-repeat="dir in movie.directors">{{dir.name}}</span></p>
+
+                    <p>主演: <span class="text-mgin10" ng-repeat="casts in movie.casts">{{casts.name}}</span></p>
+
+                </dl>
+                <strong class="pull-right text-danger">评分: <span>{{movie.rating.average}}</span></strong>
+            </dl>
+        </a>
+    </div>
+
+
+</div>

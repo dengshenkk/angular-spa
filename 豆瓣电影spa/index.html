@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app" ng-controller="AppController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.douban.com">{{title}}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!/movie">看电影 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#!/music">听音乐</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<div class="row content">
+    <div class="col-md-3 left-list">
+        <ul class="list-inlinet">
+            <li class="text-center active"><a href="#!/movie/in_theaters">热门电影</a></li>
+            <li class="text-center"><a href="#!/movie/coming_soon">最新上映</a></li>
+            <li class="text-center"><a href="#!/movie/top250">TOP250</a></li>
+        </ul>
+    </div>
+    <h2 ng-bind="res.title"></h2>
+    <div class="col-md-8" ng-view>
+
+
+    </div>
+</div>
+
+
+<script src="lib/js/jquery-2.0.0.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+<script src="lib/js/angular1.6.js"></script>
+<script src="lib/js/angular-route.js"></script>
+<script src="js/index.js"></script>
+<script src="js/config.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/service.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

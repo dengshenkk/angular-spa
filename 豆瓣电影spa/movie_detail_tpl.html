@@ -1,0 +1,26 @@
+<div ng-show="isLoading1">
+<img id='loadImg' src="images/loading3.gif" alt="">
+</div>
+
+
+<div ng-hide="isLoading1">
+
+<h1>{{res.title}}</h1>
+
+<div class="detail_content">
+    <dl class="detail_dl clearfix">
+        <dt class="pull-left text-mgin10"><img ng-src="{{res.images.large}}" width="300px" height="400px"></dt>
+        <dd class="text-info">
+            <h4 class="text-info" ng-bind="res.title"></h4>
+            <p class="text-info">类型: <span class="text-mgin10" ng-repeat="genres in res.genres">{{genres}}</span></p>
+            <p>导演: <span class="text-mgin10" ng-repeat="dir in res.directors">{{dir.name}}</span></p>
+            <p>主演: <span class="text-mgin10" ng-repeat="casts in res.casts">{{casts.name}}</span></p>
+
+            <p style="width: 80%;">简介: <span ng-bind="res.summary"></span></p>
+        </dd>
+    </dl>
+</div>
+<a  href="https://www.baidu.com/s?wd={{res.title}}" class="btn btn-success">在线观看</a>
+
+
+</div>
